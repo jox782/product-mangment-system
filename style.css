@@ -7,6 +7,8 @@
   --input-background: #111;
   --input-focus-background: #000;
   --font-color: #fff;
+  --primary-color: #cf6679;
+  --primary-color-hover: #d64e67;
 }
 
 body {
@@ -32,8 +34,9 @@ input {
   background: var(--input-background);
   margin: 4px 0;
   border-radius: 4px;
-  padding: 4px;
+  padding: 8px;
   color: var(--font-color);
+  font-size: large;
 }
 input:focus {
   background: var(--input-focus-background);
@@ -43,25 +46,31 @@ input:focus {
   width: 20%;
 }
 #total {
-  background: #a00d02;
+  background: #cf6679;
   padding: 5px 2px;
   border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  font-size: large;
 }
 #total::before {
   content: "Total: ";
 }
 button {
   width: 100%;
-  height: 30px;
   border: none;
   cursor: pointer;
-  background-color: #a00d02;
+  background-color: var(--primary-color);
   border-radius: 20px;
-  transition: 0.5s;
+  margin: 10px 0;
+  transition: 0.2s;
+  font-size: large;
+  font-weight: bold;
+  padding: 10px;
 }
 button:hover {
-  background-color: #9c322a;
-  letter-spacing: 2px;
+  background-color: var(--primary-color-hover);
+  /* letter-spacing: 2px; */
 }
 .btn-search {
   display: flex;
@@ -72,6 +81,9 @@ button:hover {
 }
 /* End input */
 /* Start output */
+#deleteAll {
+  margin-top: 10px;
+}
 table {
   width: 100%;
   text-align: center;
